@@ -1,28 +1,15 @@
-// reference the http module so we can create a webserver
-var http = require("http");
-var fs = require("fs");
-var htmlData;
-var pagePath="../html/404.html";
+var http = require("http"),
+    url = require("url");
 
+function start(route, handle, port) {
+  function onRequest(request, response) {
+    var pathname = url.parse(request.url).pathname;
+    console.log(pathname);
+    route(handle, pathname, response);
+  }
 
-// create a server
-	http.createServer(function(req, res) {
-	    // on every request, we'll output 'Hello world'
-	    if(req.url=='/index.html' || req.url=='/') {
-			pagePath = "../html/index.html";
-		}
+http.createServer(onRequest).listen(port);
+  console.log("Server has started listening on port " + port);
+}
 
-		fs.readFile(pagePath, function (err, htmlData) {
-		    	if (err) {
-		    		res.statusCode = 404;
-		        	throw err; 
-		    	} else {
-		    		res.statusCode = 200;
-		    	}
-				res.setHeader("Content-Type", "text/html");
-	    		res.write(htmlData);
-	    		res.end();
-			});
-
-	}).listen(3000);
-
+exports.start = start;
