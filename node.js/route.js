@@ -1,11 +1,18 @@
-function route(handle, pathname, response) {
-  if (typeof handle[pathname] === 'function') {
-    handle[pathname](response);
+function route(handle, pathname, ext, response) {
+  if (typeof handle[pathname] == 'function') {
+ 	handle[pathname](pathname, ext, response);
   } else {
-    console.log("No request handler found for " + pathname);
-    response.writeHead(404, {"Content-Type": "text/html"});
-    response.write("404 Not found");
-    response.end();
+  	if(ext != ".html"){ // launch requesthandler for the supporting content for the current page such as css, javascript or images.
+  		handle["otherExt"](pathname, ext, response);
+  	} else {
+	  	console.log("No request handler found for " + pathname);
+	    response.writeHead(404, {"Content-Type": "text/html"});
+	    response.write("404 Not found");
+	    response.end();		
+  	}
+	
+	
+    
   }
 }
 

@@ -3,8 +3,9 @@ var server = require("./server"),
     requestHandlers = require("./requestHandler");
 
 var handle = {}
-handle["/index"] = requestHandlers.index;
-handle["/admin"] = requestHandlers.admin;
+handle["/index.html"] = requestHandlers.index;
+handle["/admin.html"] = requestHandlers.admin;
+handle["otherExt"] = requestHandlers.otherExt;
 
 var port = 3000;
 server.start(router.route, handle, port);
