@@ -1,9 +1,6 @@
 var http = require("http"),
     url = require("url"),
-    path = require("path"),
-    querystring = require("querystring"),
-    utils = require("util"),
-    zlib = require("zlib");
+    path = require("path");
 
 
 function start(route, handle, port) {
@@ -20,28 +17,20 @@ function start(route, handle, port) {
 	      fullBody += chunk.toString();
 	      
 	    });
-	    
 		request.on('start', function() {
-	    
-	      // request ended -> do something with the data
 	      
-	      response.writeHead(200, "OK", {'Content-Type': 'text/html'});
+	      //response.writeHead(200, "OK", {'Content-Type': 'application/json'});
 	     
 	    });
-
-	    request.on('end', function() {
-	    
-	      // request ended -> do something with the data
+		request.on('end', function() {
 	      
-	      
-	     response.write(fullBody);
-	      
-	      response.end();
+	      handle["/createNewEvent"](fullBody);
+	     //response.write(fullBody);
+	      //response.end();
 	    });
     
   	}
-
-
+  	
     var pathname = url.parse(request.url).pathname;
     if(pathname == "/"){
     	pathname = "/index";
@@ -53,6 +42,7 @@ function start(route, handle, port) {
     }
     
     route(handle, pathname, ext, response);
+    require("./dbController").connect();
   }
 
 http.createServer(onRequest).listen(port);
@@ -60,3 +50,4 @@ http.createServer(onRequest).listen(port);
 }
 
 exports.start = start;
+

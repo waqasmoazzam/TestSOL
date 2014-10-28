@@ -7,6 +7,8 @@ handle["/index"] = requestHandlers.index;
 handle["/admin"] = requestHandlers.admin;
 handle["/test"] = requestHandlers.test;
 handle["otherExt"] = requestHandlers.otherExt;
+handle["/createNewEvent"] = requestHandlers.createNewEvent;
+handle["/getAllArticles"] = requestHandlers.getAllArticles;
 
 var port = 3000;
 server.start(router.route, handle, port);
