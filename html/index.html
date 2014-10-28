@@ -1,28 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Test SOL!</title>
-        <link rel="stylesheet" href="css/main.css" type="text/css"/>
-    </head>
-    
-    <body>
-        <div id="content">
-            <div id="div_container_1" style="display : inline-block">
-                <div id="div_img_1">
-                    <a id="a_1" href="http://www.sol.no" target="_blank">
-                        <img id="img_1" src="http://www.lifemock.com/wp-content/uploads/2014/01/solLOGO.png">
-                    </a>
+<head>
+    <meta charset="utf-8" />
+    <title>Home - Test SOL!</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/index.css" rel="stylesheet" media="screen">
+</head>
+
+<body>
+    <div class="header">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/index.html">Test SOL</a>
                 </div>
-                <div id="div_title_1">
-                    <h3 style="text-align : center">
-                        <a id="a_1"href="http://www.sol.no" target="_blank" style="text-decoration : none">
-                            <span id="span_1"style="color:grey">Hello SOL!</span>
-                        </a>
-                    </h3>
+
+                <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/index">Home</a></li>
+                        <li><a href="/admin">Admin</a></li>
+                    </ul>
                 </div>
             </div>
+        </nav>
+    </div>
+
+    <div id="content">
+        <div id="div_container_1" style="display : inline-block">
+            <div id="div_img_1">
+                <a id="a_1" href="http://www.sol.no" target="_blank">
+                    <img id="img_1" src="http://www.lifemock.com/wp-content/uploads/2014/01/solLOGO.png">
+                </a>
+            </div>
+            <div id="div_title_1">
+                <h3 style="text-align : center">
+                    <a id="a_1"href="http://www.sol.no" target="_blank" style="text-decoration : none">
+                        <span id="span_1"style="color:grey">Hello SOL!</span>
+                    </a>
+                </h3>
+            </div>
         </div>
-        <script src="js/index.js"></script>
-    </body>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
 </html>

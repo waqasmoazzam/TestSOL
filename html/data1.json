@@ -1,0 +1,208 @@
+[
+
+{
+    "_id": {
+        "$oid": "54301f71588af691ffc533ef"
+    },
+    "content": [
+        "<h3 class=\"title_8\"><a href=\"http://www.kk.no/livsstil/slik-%C3%A5pner-du-vinflasken-uten-opptrekker-26001\">Slik åpner du vinen uten opptrekker<\/a><\/h3>"
+    ],
+    "createTime": {
+        "$ts": 1412439921,
+        "$inc": 213
+    },
+    "drFrontId": "df-66-s9c72a66",
+    "imgUrl": "http://www.filarkiv.no/image/drfront/2014/10/04/c=167,0,530,487;w=380;h=349;118033.jpg",
+    "link": "http://www.kk.no/livsstil/slik-%C3%A5pner-du-vinflasken-uten-opptrekker-26001",
+    "type": "ARTICLE",
+    "updateTime": {
+        "$ts": 1412529579,
+        "$inc": 228
+    }
+},
+{
+    "_id": {
+        "$oid": "54302143588af691ffc533f0"
+    },
+    "content": [
+        "<h3 class=\"main-title title_11 bold\"><a href=\"http://www.vg.no/nyheter/utenriks/haiti/jean-claude-baby-doc-duvalier-er-doed/a/23309359/\">«Baby Doc» er død<\/a><\/h3>"
+    ],
+    "createTime": {
+        "$ts": 1412440387,
+        "$inc": 209
+    },
+    "drFrontId": "df-66-h1b8035e",
+    "imgUrl": "http://www.filarkiv.no/image/drfront/2014/10/04/c=193,170,505,231;w=199;h=91;118034.jpg",
+    "link": "http://www.vg.no/nyheter/utenriks/haiti/jean-claude-baby-doc-duvalier-er-doed/a/23309359/",
+    "type": "ARTICLE",
+    "updateTime": {
+        "$ts": 1412529579,
+        "$inc": 222
+    }
+},
+{
+    "_id": {
+        "$oid": "543025ea588af691ffc533f1"
+    },
+    "content": [
+        "<h3 class=\"title_7 theme-coloured\">PREMIER LEAGUE DIREKTE:<\/h3>",
+        "<h3 class=\"title_12 bold\"><a href=\"http://vglive.no/#match=10011530\">Tar City viktig seier i Birmingham?<\/a><\/h3>",
+        "<p class=\"title_3\"><span class=\"theme-coloured bold\">FØLG:<\/span> <a href=\"http://vglive.no/#match=10011530\">Aston Villa - Manchester City<\/a><\/p>"
+    ],
+    "createTime": {
+        "$ts": 1412441578,
+        "$inc": 183
+    },
+    "drFrontId": "df-66-j1f85144",
+    "imgUrl": "",
+    "link": "http://vglive.no/#match=10011530",
+    "type": "ARTICLE",
+    "updateTime": {
+        "$ts": 1412447210,
+        "$inc": 362
+    }
+},
+{
+    "_id": {
+        "$oid": "5430280d588af691ffc533f2"
+    },
+    "content": [
+        "<h3 class=\"title_9 bold\"><a href=\"http://www.vg.no/nyheter/innenriks/kolberg-velger-bort-kongens-fest/a/23308911/\">Kolberg velger bort kongens fest<\/a><\/h3>"
+    ],
+    "createTime": {
+        "$ts": 1412442125,
+        "$inc": 221
+    },
+    "drFrontId": "df-66-x0c96dd3",
+    "imgUrl": "http://www.filarkiv.no/image/drfront/2014/10/04/c=242,35,576,539;w=482;h=451;118036.jpg",
+    "link": "http://www.vg.no/nyheter/innenriks/kolberg-velger-bort-kongens-fest/a/23308911/",
+    "type": "ARTICLE",
+    "updateTime": {
+        "$ts": 1412442312,
+        "$inc": 224
+    }
+},
+{
+    "_id": {
+        "$oid": "54302857588af691ffc533f3"
+    },
+    "content": [
+        "<h3 class=\"title_6\"><a href=\"http://www.rb.no/lokale_nyheter/article7621853.ece\">Se hvem som dukket opp på kontoret til Johanne og Vilhelm<\/a><\/h3>"
+    ],
+    "createTime": {
+        "$ts": 1412442199,
+        "$inc": 217
+    },
+    "drFrontId": "df-66-jb61f0a0",
+    "imgUrl": "http://www.filarkiv.no/image/drfront/2014/10/04/w=480;h=358;118035.jpg",
+    "link": "http://www.rb.no/lokale_nyheter/article7621853.ece",
+    "type": "ARTICLE",
+    "updateTime": {
+        "$ts": 1412529579,
+        "$inc": 242
+    }
+},
+{
+    "_id": {
+        "$oid": "54302857588af691ffc533f4"
+    },
+    "content": [
+        "<h3 class=\"title_4\"><a href=\"http://www.ba.no/nyheter/article7621708.ece\">Voksent par tok kontakt:<\/a><\/h3>",
+        "<h3 class=\"title_8 bold\"><a href=\"http://www.ba.no/nyheter/article7621708.ece\">- Han tok Tinka, puttet henne i lommen og løp<\/a><\/h3>"
+    ],
+    "createTime": {
+        "$ts": 1412442199,
+        "$inc": 219
+    },
+    "drFrontId": "df-66-ida4bfbe",
+    "imgUrl": "http://www.filarkiv.no/image/drfront/2014/10/04/c=355,222,623,366;w=480;h=282;118032.jpg",
+    "link": "http://www.ba.no/nyheter/article7621708.ece",
+    "type": "ARTICLE",
+    "updateTime": {
+        "$ts": 1412529579,
+        "$inc": 240
+    }
+},
+{
+    "_id": {
+        "$oid": "543028c8588af691ffc533f5"
+    },
+    "content": [
+        "<h3 class=\"title_6\"><a href=\"http://www.dinside.no/930671/sms-tasting-er-like-farlig-som-promille\">- Like farlig som promille<\/a><\/h3>"
+    ],
+    "createTime": {
+        "$ts": 1412442312,
+        "$inc": 223
+    },
+    "drFrontId": "df-66-a96d9d9e",
+    "imgUrl": "http://www.filarkiv.no/image/drfront/2014/10/04/c=0,56,940,545;w=233;h=135;118037.jpg",
+    "link": "http://www.dinside.no/930671/sms-tasting-er-like-farlig-som-promille",
+    "type": "ARTICLE",
+    "updateTime": {
+        "$ts": 1412444199,
+        "$inc": 438
+    }
+},
+{
+    "_id": {
+        "$oid": "543029f2588af691ffc533f6"
+    },
+    "content": [
+        "<h3 class=\"title_12 bold\"><a href=\"http://www.nrk.no/nordland/sjeldent-skyfenomen-over-andoy-1.11965736\">- Det var litt små-skummelt<\/a><\/h3>",
+        "<p class=\"title_3\">Meteorolog: <a href=\"http://www.nrk.no/nordland/sjeldent-skyfenomen-over-andoy-1.11965736\">- Aldri sett før.<\/a><\/p>"
+    ],
+    "createTime": {
+        "$ts": 1412442610,
+        "$inc": 225
+    },
+    "drFrontId": "df-66-lae05f49",
+    "imgUrl": "http://www.filarkiv.no/image/drfront/2014/10/04/c=33,71,1134,605;w=480;h=256;118038.jpg",
+    "link": "http://www.nrk.no/nordland/sjeldent-skyfenomen-over-andoy-1.11965736",
+    "type": "ARTICLE",
+    "updateTime": {
+        "$ts": 1412454444,
+        "$inc": 216
+    }
+},
+{
+    "_id": {
+        "$oid": "54302bc8588af691ffc533f9"
+    },
+    "content": [
+        "<h3 class=\"title_10\"><a href=\"http://www.seher.no/kjendis/hyllet-eks-kj-resten-live-p-skal-vi-danse-74763\">Derfor gjorde han dette<\/a><\/h3>"
+    ],
+    "createTime": {
+        "$ts": 1412443080,
+        "$inc": 421
+    },
+    "drFrontId": "df-66-w4742ae7",
+    "imgUrl": "http://www.filarkiv.no/image/drfront/2014/10/04/c=0,104,941,329;w=480;h=168;118029.jpg",
+    "link": "http://www.seher.no/kjendis/hyllet-eks-kj-resten-live-p-skal-vi-danse-74763",
+    "type": "ARTICLE",
+    "updateTime": {
+        "$ts": 1412529579,
+        "$inc": 216
+    }
+},
+{
+    "_id": {
+        "$oid": "54302bc9588af691ffc533fa"
+    },
+    "content": [
+        "<h3 class=\"title_9 bold\"><a href=\"http://www.vg.no/nyheter/innenriks/kolberg-velger-bort-kongens-fest/a/23308911/\">Kolberg velger bort kongens fest<\/a><\/h3>"
+    ],
+    "createTime": {
+        "$ts": 1412443080,
+        "$inc": 423
+    },
+    "drFrontId": "df-66-o8f3a213",
+    "imgUrl": "http://www.filarkiv.no/image/drfront/2014/10/04/c=223,72,630,192;w=480;h=146;118036.jpg",
+    "link": "http://www.vg.no/nyheter/innenriks/kolberg-velger-bort-kongens-fest/a/23308911/",
+    "type": "ARTICLE",
+    "updateTime": {
+        "$ts": 1412529579,
+        "$inc": 218
+    }
+}
+
+]

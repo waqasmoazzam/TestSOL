@@ -1,15 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Bootstrap 101 Template</title>
+	<title>Admin - Test SOL</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Bootstrap -->
 	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="css/bootstrap-table.min.css" rel="stylesheet" media="screen">
+	<link href="css/admin.css" rel="stylesheet" media="screen">
 </head>
+
 <body>
-	<h1>Hello, Admin!</h1>
-	<a href="#" class="btn">Bootstrap</a>
+	<div class="header">
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="/index.html">Test SOL</a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="/index">Home</a></li>
+						<li class="active"><a href="/admin">Admin</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	<div class="content">
+
+		<div class="container-fluid">
+			
+			<form id="event-form" class="form-horizontal" role="form" action="" method="post">
+
+				<legend>Create an Event</legend>
+
+				<div class="form-group">
+					<label for="inputEventName" class="col-sm-2 control-label">Name</label>
+					<div class="col-sm-8">
+						<input class="form-control" id="inputEventName"  name="eName" placeholder="event name">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="inputEventType" class="col-sm-2 control-label">Category</label>
+					<div class="col-sm-8">
+						<input class="form-control" id="inputEventType"  name="eType"  placeholder="event type (optional)">
+					</div>
+				</div>
+
+				<div class="form-group">
+
+					<div class="container">
+						<table id="articles_list" class="table table-striped" >
+							<thead>
+								<tr>
+									<th><input  name="selectall_checkbox" type="checkbox" class="checkbox"  id="btnSelectAll" onclick="checkAll(this)" style="margin-left:8px"></th>
+									<th><label style="margin-left:8px">Id</th></label>
+									<th><label style="margin-left:8px">Title</th></label>
+									<th><label style="margin-left:8px">Type</th></label>
+									<th><label style="margin-left:8px">Link</th></label>
+								</tr>
+							</thead>
+							<tbody>
+
+									<!--
+									<tr>
+										<th><input type="checkbox" class="checkbox" id="checkbox_2"></th>
+										<td>9876sf837</td>
+										<td>Footbal article news</td>
+										<td>VG</td>
+										<td>http://www.vg.no</td>
+									</tr> -->
+								</tbody>
+							</table>
+
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-8">
+							<div class="pull-right">
+								<button type="submit" name="submit" value="SUBMIT" class="btn btn-success" id="submit">Create</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
 	<script src="http://code.jquery.com/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-table.min.js"></script>
+	<script src="js/admin.js"></script>
 </body>
 </html>
