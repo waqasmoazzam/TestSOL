@@ -13,19 +13,30 @@ var article = new article("SOLTV");
 function connect(){
 	if(!articlesDB){
 		console.log("connecting for articles:");
-		articlesDB = mongojs.connect("mongodb://article_reader:article_reader@ds063879.mongolab.com:63879/heroku_app29725784", ["articles"]);
+		articlesDB = mongojs.connect("mongodb://article_reader:article_reader@ds033390.mongolab.com:33390/heroku_app31091945", ["articles"]);
+		articlesDB.getCollectionNames(function(err, data){
+			console.log("collection names: " + data);
+		});
 	}
 	if(!myDB){
 		console.log("connecting for events");
-		myDB = mongojs.connect(" mongodb://waqasmoazzam:123abc123@ds039960.mongolab.com:39960/test_sol", ["events"]);	
+		myDB = mongojs.connect("mongodb://event_creator:event_creator@ds047440.mongolab.com:47440/test_sol", ["events"]);
+		myDB.getCollectionNames(function(err, data){
+			console.log("collection names: " + data);
+		});
+
 	}
 	
 	
 }
 
-function getAllArticles(callback){
-	connect();
-	articlesDB.articles.find(function(err,articlesData){
+function getAllArticles(searchCriteria, callback){
+	
+	if(searchCriteria == ""){
+		searchCriteria ={};
+	}
+
+	articlesDB.articles.find(searchCriteria, function(err,articlesData){
 		console.log(articlesData.length);	
 		if(err || !articlesData.length) {
 			console.log("in get all articles db error");	
@@ -38,7 +49,7 @@ function getAllArticles(callback){
 }
 
 function getArticle(articleId, callback){
-	connect();
+	
 	articlesDB.articles.find({_id:mongojs.ObjectId(articleId)}, function(err,singleArticleData){
 		if(err ) {
 			callback(err, null);
@@ -51,7 +62,7 @@ function getArticle(articleId, callback){
 
 
 function getAllEvents(callback){
-	connect();
+	
 	myDB.events.find(function(err,eventsData){
 		
 		if(err || !eventsData.length) {
@@ -62,8 +73,18 @@ function getAllEvents(callback){
 	});	
 }
 
-function createNewEvent(event){
-	connect();
+function createNewEvent(eventData, callback){
+	
+	//db.collection.insert(docOrDocs, [callback])
+	myDB.events.insert(eventData, function(err, data){
+		if(err) {
+			console.log("in db create new event error");	
+			callback(err);
+		} else {
+			console.log("in db create new event success: " + data);	
+			callback(err, data);
+		}
+	});
 
 }
 
@@ -72,6 +93,7 @@ exports.connect = connect;
 exports.articles = getAllArticles;
 exports.article = getArticle;
 exports.events = getAllEvents;
+exports.createEvent = createNewEvent;
 
 
 

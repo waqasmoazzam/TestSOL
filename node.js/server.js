@@ -5,31 +5,7 @@ var http = require("http"),
 
 function start(route, handle, port) {
   function onRequest(request, response) {
-    
 
-  	if (request.method == 'POST') {
-	    console.log("[200] " + request.method + " to " + request.url);
-	    var fullBody = '';
-	    
-	    request.on('data', function(chunk) {
-	      // append the current chunk of data to the fullBody variable
-	      console.log(chunk.toString());
-	      fullBody += chunk.toString();
-	      
-	    });
-		request.on('start', function() {
-	      
-	      //response.writeHead(200, "OK", {'Content-Type': 'application/json'});
-	     
-	    });
-		request.on('end', function() {
-	      
-	      handle["/createNewEvent"](fullBody);
-	     //response.write(fullBody);
-	      //response.end();
-	    });
-    
-  	}
   	
     var pathname = url.parse(request.url).pathname;
     if(pathname == "/"){
@@ -40,13 +16,35 @@ function start(route, handle, port) {
     if(!ext){
     	ext=".html";
     }
+    if (request.method == 'POST') {
+	    console.log("[200] " + request.method + " to " + request.url);
+	    var postBody = '';
+	    
+	    request.on('data', function(chunk) {
+	      // append the current chunk of data to the postBody variable
+	      postBody += chunk.toString();
+	      
+	    });
+		request.on('start', function() {
+	      
+	      //response.writeHead(200, "OK", {'Content-Type': 'application/json'});
+	     
+	    });
+		request.on('end', function() {
+	     route(handle, pathname, ext, response, postBody);
+	     // handle["/createNewEvent"](postBody);
+	     //response.write(postBody);
+	      //response.end();
+	    });
     
-    route(handle, pathname, ext, response);
-    require("./dbController").connect();
+  	} else {
+  		route(handle, pathname, ext, response);	
+  	}
   }
 
 http.createServer(onRequest).listen(port);
   console.log("Server has started listening on port " + port);
+  require("./dbController").connect();
 }
 
 exports.start = start;

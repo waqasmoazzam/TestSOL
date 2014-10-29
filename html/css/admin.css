@@ -3,5 +3,5 @@
 };
 
 .show_table{
-	display: block;
+	display: inherit;
 };

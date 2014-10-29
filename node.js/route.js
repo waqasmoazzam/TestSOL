@@ -1,6 +1,6 @@
-function route(handle, pathname, ext, response) {
+function route(handle, pathname, ext, response, postBody) {
   if (typeof handle[pathname] == 'function') {
- 	handle[pathname](pathname, ext, response);
+ 	handle[pathname](pathname, ext, response, postBody);
   } else {
   	if(ext != ".html"){ // launch requesthandler for the supporting content for the current page such as css, javascript or images.
   		handle["otherExt"](pathname, ext, response);
