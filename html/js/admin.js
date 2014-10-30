@@ -19,7 +19,7 @@ $('#event-form').on('submit', function(e){
 	var dataArr = $("#event-form").serialize().split("&");
 
 	if(dataArr.length < 4){
-  		alert("Minimum 2 articles required to create an event. Try again!");
+  		alert("Minimum 2 articles are required to create an event. Try again!");
   		return;
   	}
 

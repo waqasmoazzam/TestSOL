@@ -52,23 +52,35 @@ function getEventData(e){
 
 function loadEventArticles(eventData){
 	console.log(eventData[0].articleIds);
+
 	/*var articleData = "{"
 	articleData += JSON.stringify("articleIds");
 	articleData += ":";
 	articleData += JSON.stringify(eventData[0].articleIds);
 	articleData += "}";*/
+
 	$.ajax({
 		url: "/getFewArticles",
 		type: "POST",
 		data: JSON.stringify(eventData[0].articleIds),
 		dataType: "json",
 		success: function(data){
-			console.log(JSON.stringify(data));
 			
+			console.log(JSON.stringify(data));
+
+			$("#articles-container").children("div").each(function () {
+    			if(this.id != "hidden-box"){
+    				this.remove();
+    			}
+			});
+
+			var parentDiv = document.getElementById("articles-container");
+			var hiddenBox = document.getElementById("hidden-box");
+			var newElement;
+
 			for(var i = 0 ; i < data.length ; i++ ){
-				var parentDiv = document.getElementById("articles-container");
-				var hiddenBox = document.getElementById("hidden-box");
-				var newElement = hiddenBox.cloneNode(true);	
+				
+				newElement = hiddenBox.cloneNode(true);	
 				parentDiv.appendChild(newElement);
 				newElement.id = i;
 				$("#" + i).find("#img_1").attr("src", data[i].imgUrl);

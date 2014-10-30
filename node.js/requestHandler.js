@@ -95,7 +95,6 @@ function createNewEvent(pathname, ext, response, postBody){
 	  		response.end("Failed!. Refresh the page and try again.");	
 	  	}else {
 	  		console.log("in handle create new event success.");	
-	  		//response.writeHead(200, { 'Content-Type': 'application/json' });
 	  		response.writeHead(200, { 'Content-Type': extensions[".json"]});
 			response.write(JSON.stringify(data));
 			response.end();	
@@ -115,8 +114,7 @@ function getAllArticles(pathname, ext, response, postBody){
 	  		response.end("404 Articles link is down. Try again later!");	
 	  	}else {
 	  		console.log("in handle get all articles success: " + data.length);	
-	  		//response.writeHead(200, { 'Content-Type': 'application/json' });
-	  		response.writeHead(200, { 'Content-Type': 'application/json', "Access-Control-Allow-Origin":"*" });
+	  		response.writeHead(200, { 'Content-Type': 'application/json' });
 			response.write(JSON.stringify(data));
 			response.end();	
 	  	}
@@ -126,7 +124,7 @@ function getAllArticles(pathname, ext, response, postBody){
 
 function getFewArticles(pathname, ext, response, postBody){
 	// write the new event in the myDB by calling dbControlle. getAllArticles() 
-	console.log("In handle get few article: " + postBody);
+	console.log("In handle get few article: ");
 	postBody = JSON.parse(postBody);
 	/*var articleIds = postBody["articleIds"];
 	console.log(postBody);*/
@@ -136,7 +134,7 @@ function getFewArticles(pathname, ext, response, postBody){
 	  		response.end("404 link is down. Try again later!");	
 	  	}else {
 	  		console.log("in handle get few article success: " + data.length);	
-	  		response.writeHead(200, { 'Content-Type': 'application/json', "Access-Control-Allow-Origin":"*" });
+	  		response.writeHead(200, { 'Content-Type': 'application/json'});
 			response.write(JSON.stringify(data));
 			response.end();	
 	  	}
@@ -154,8 +152,7 @@ function getAllEvents(pathname, ext, response){
 	  		response.end("404 Events link is down. Try again later!");	
 	  	}else {
 	  		console.log("in handle get all events success: " + data.length);	
-	  		//response.writeHead(200, { 'Content-Type': 'application/json' });
-	  		response.writeHead(200, { 'Content-Type': 'application/json', "Access-Control-Allow-Origin":"*" });
+	  		response.writeHead(200, { 'Content-Type': 'application/json'});
 			response.write(JSON.stringify(data));
 			response.end();	
 	  	}
@@ -175,8 +172,8 @@ function getSingleEvent(pathname, ext, response, postBody){
 	  		response.end("404 Events link is down. Try again later!");	
 	  	}else {
 	  		console.log("in handle get single event success: " + data.length);	
-	  		//response.writeHead(200, { 'Content-Type': 'application/json' });
-	  		response.writeHead(200, { 'Content-Type': 'application/json', "Access-Control-Allow-Origin":"*" });
+	  		
+	  		response.writeHead(200, { 'Content-Type': 'application/json'});
 			response.write(JSON.stringify(data));
 			response.end();	
 	  	}
