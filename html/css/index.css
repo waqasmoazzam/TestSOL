@@ -40,11 +40,13 @@
  #page-content-wrapper {
  	width: 100%;
  	padding: 15px;
+ 	margin-top: 60px;
  }
 
  #wrapper.toggled #page-content-wrapper {
  	position: absolute;
  	margin-right: -250px;
+
  }
 
  /* Sidebar Styles */
@@ -56,6 +58,10 @@
  	margin: 0;
  	padding: 0;
  	list-style: none;
+ 	position:relative;
+ 	overflow-y:auto;
+  	overflow-x:hidden;
+ 	
  }
 
  .sidebar-nav li {
