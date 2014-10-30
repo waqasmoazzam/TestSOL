@@ -24,6 +24,7 @@ function loadEvents(data){
 		// $("#types-dropdown ul").append('<li><a href="loadEvents" id="loadEvents" value="' + data[i].eventType +'">"'+data[i].eventType+'"</a></li>');
 
 	}
+	loadEventArticles(data);
 }
 
 function getEventData(e){
