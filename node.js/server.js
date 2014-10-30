@@ -21,20 +21,13 @@ function start(route, handle, port) {
 	    var postBody = '';
 	    
 	    request.on('data', function(chunk) {
-	      // append the current chunk of data to the postBody variable
 	      postBody += chunk.toString();
 	      
 	    });
-		request.on('start', function() {
-	      
-	      //response.writeHead(200, "OK", {'Content-Type': 'application/json'});
-	     
-	    });
+
 		request.on('end', function() {
 	     route(handle, pathname, ext, response, postBody);
-	     // handle["/createNewEvent"](postBody);
-	     //response.write(postBody);
-	      //response.end();
+	     
 	    });
     
   	} else {

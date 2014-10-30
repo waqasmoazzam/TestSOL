@@ -2,14 +2,6 @@
 var mongojs = require("mongojs");
 var articlesDB, myDB;
 
-function article(type){
-	this.type = type;
-}
-
-
-
-var article = new article("SOLTV");
-
 function connect(){
 	if(!articlesDB){
 		console.log("connecting for articles:");
@@ -48,13 +40,27 @@ function getAllArticles(searchCriteria, callback){
 	});	
 }
 
-function getArticle(articleId, callback){
-	
-	articlesDB.articles.find({_id:mongojs.ObjectId(articleId)}, function(err,singleArticleData){
+function getArticles(articleIds, callback){
+	var articleObjectIds = [];
+	for(var i = 0 ; i < articleIds.length ; i++ ){
+		articleObjectIds[i] = mongojs.ObjectId(articleIds[i]); 
+	}
+	articlesDB.articles.find({ _id: { $in : articleObjectIds } }, function(err,articlesData){
 		if(err ) {
 			callback(err, null);
 		} else {
-			callback(err, singleArticleData);
+			callback(err, articlesData);
+		}
+	});	
+}
+
+function getEvent(eventId, callback){
+	
+	myDB.events.find({_id:mongojs.ObjectId(eventId)}, function(err,eventData){
+		if(err ) {
+			callback(err, null);
+		} else {
+			callback(err, eventData);
 		}
 	});	
 }
@@ -91,7 +97,8 @@ function createNewEvent(eventData, callback){
 
 exports.connect = connect;
 exports.articles = getAllArticles;
-exports.article = getArticle;
+exports.fewArticles = getArticles;
+exports.singleEvent = getEvent;
 exports.events = getAllEvents;
 exports.createEvent = createNewEvent;
 

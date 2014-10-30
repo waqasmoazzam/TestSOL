@@ -1,7 +1,5 @@
 $(document).ready(function() {
-	
-	//addArticleData(null);
-	//$( '#submit' ).click( showValues );	
+
 	makeAjaxCallForArticles();
 
 } );
@@ -36,24 +34,6 @@ $('#event-form').on('submit', function(e){
 		}
 	});
 });
-
-/*$('#load-articles').on('click', function(e){
-	
-	e.preventDefault();
-
-	$.ajax({
-		url: "/getAllArticles",
-		type: "GET",
-		success: function(data){
-			
-			$('#load-articles').attr("class", "hide_btn");
-			//$('#articles-list').add("class", "show_table");
-			loadArticles(data);
-		}
-	});
-	
-});*/
-
 
 $(window).scroll(function() {
    if($(window).scrollTop() + $(window).height() == $(document).height()) {

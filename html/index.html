@@ -11,6 +11,7 @@
 </head>
 
 <body>
+
     <div class="header">
         <nav class="navbar navbar-default" role="navigation">
             <div class="container-fluid">
@@ -21,37 +22,80 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/index.html">Test SOL</a>
+                    
                 </div>
 
                 <div class="collapse navbar-collapse" id="navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="/index">Home</a></li>
+
+                        <li>
+                            <a href="#menu-toggle" class="navbar-toggle" id="menu-toggle"> 
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </a>
+                        </li>
+                        <a class="navbar-brand" href="/index.html">Test SOL</a>
+                        <li class="active"><a href="/index">Events</a></li>
                     </ul>
+                    <!-- <div id="types-dropdown">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Event Types <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </div> -->
                 </div>
+
             </div>
         </nav>
     </div>
 
-    <div id="content">
-        <div id="div_container_1" style="display : inline-block">
-            <div id="div_img_1">
-                <a id="a_1" href="http://www.sol.no" target="_blank">
-                    <img id="img_1" src="http://www.lifemock.com/wp-content/uploads/2014/01/solLOGO.png">
-                </a>
-            </div>
-            <div id="div_title_1">
-                <h3 style="text-align : center">
-                    <a id="a_1"href="http://www.sol.no" target="_blank" style="text-decoration : none">
-                        <span id="span_1"style="color:grey">Hello SOL!</span>
-                    </a>
-                </h3>
+    <div id="wrapper">
+
+       <!-- Sidebar -->
+       <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+
+        </ul>
+    </div>
+
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <center>
+                        <div id="articles-container" class="col-lg-12" >
+                            <div id="hidden-box" style="display : none">
+                                <div id="div_img_1">
+                                    <a id="a_1" href="http://www.sol.no" target="_blank">
+                                        <img id="img_1"  src="http://www.lifemock.com/wp-content/uploads/2014/01/solLOGO.png">
+                                    </a>
+                                </div>
+                                <div id="div_title_1">
+                                    <h3 style="text-align : center">
+                                        <a id="a_1"href="http://www.sol.no" target="_blank" style="text-decoration : none">
+                                            <span id="span_1"style="color:grey">Hello SOL!</span>
+                                        </a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </center>
+                </div>
+
             </div>
         </div>
     </div>
+</div>
+</div>
 
-    <script src="/js/index.js"></script>
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>

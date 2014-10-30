@@ -11,8 +11,6 @@ function route(handle, pathname, ext, response, postBody) {
 	    response.end();		
   	}
 	
-	
-    
   }
 }
 
