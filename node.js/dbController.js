@@ -3,16 +3,10 @@ var mongojs = require("mongojs");
 var articlesDB, myDB;
 
 function connect(){
-	if(!articlesDB){
-		console.log("connecting for articles:");
-		articlesDB = mongojs.connect("mongodb://article_reader:article_reader@ds033390.mongolab.com:33390/heroku_app31091945", ["articles"]);
-		articlesDB.getCollectionNames(function(err, data){
-			console.log("collection names: " + data);
-		});
-	}
+	
 	if(!myDB){
-		console.log("connecting for events");
-		myDB = mongojs.connect("mongodb://event_creator:event_creator@ds047440.mongolab.com:47440/test_sol", ["events"]);
+		console.log("connecting to myDB");
+		myDB = mongojs.connect("mongodb://event_creator:event_creator@ds047440.mongolab.com:47440/test_sol", ["events","articles"]);
 		myDB.getCollectionNames(function(err, data){
 			console.log("collection names: " + data);
 		});
@@ -28,7 +22,7 @@ function getAllArticles(searchCriteria, callback){
 		searchCriteria ={};
 	}
 
-	articlesDB.articles.find(searchCriteria, function(err,articlesData){
+	myDB.articles.find(searchCriteria, function(err,articlesData){
 		console.log(articlesData.length);	
 		if(err || !articlesData.length) {
 			console.log("in get all articles db error");	
@@ -45,7 +39,7 @@ function getArticles(articleIds, callback){
 	for(var i = 0 ; i < articleIds.length ; i++ ){
 		articleObjectIds[i] = mongojs.ObjectId(articleIds[i]); 
 	}
-	articlesDB.articles.find({ _id: { $in : articleObjectIds } }, function(err,articlesData){
+	myDB.articles.find({ _id: { $in : articleObjectIds } }, function(err,articlesData){
 		if(err ) {
 			callback(err, null);
 		} else {

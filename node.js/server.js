@@ -8,6 +8,11 @@ function start(route, handle, port) {
 
   	
     var pathname = url.parse(request.url).pathname;
+    
+  if(pathname == "/favicon.ico"){
+      return;
+    }
+
     if(pathname == "/"){
     	pathname = "/index";
     }

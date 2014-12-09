@@ -21,7 +21,7 @@ function loadEvents(data){
 		//console.log(data[i]._id);
 		$("#sidebar-wrapper ul").append('<li><a href="#" onclick="getEventData(this)" id="' + data[i]._id +'">'+data[i].eventName+'</a></li>');
 		
-		// $("#types-dropdown ul").append('<li><a href="loadEvents" id="loadEvents" value="' + data[i].eventType +'">"'+data[i].eventType+'"</a></li>');
+		//$("#types-dropdown ul").append('<li><a href="loadEvents" id="loadEvents" value="' + data[i].eventType +'">"'+data[i].eventType+'"</a></li>');
 
 	}
 	loadEventArticles(data);
@@ -86,7 +86,7 @@ function loadEventArticles(eventData){
 				$("#" + i).find("#img_1").attr("src", data[i].imgUrl);
 				$("#" + i).find("#a_1").attr("href", data[i].link);
 				$("#" + i).find("#span_1").html(data[i].content[0]);
-				$("#" + i).css("display", "block");
+				$("#" + i).css("display", "inline-block");
 				
 			}
 		}
